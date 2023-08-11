@@ -11,3 +11,7 @@ class Book(models.Model):
     pages = models.IntegerField()
     isbn = models.IntegerField(null=True)
     authors = models.ManyToManyField("Author")
+    # ↓ New field ↓
+    price = models.DecimalField(
+        max_digits=8, decimal_places=2, null=True
+    )
